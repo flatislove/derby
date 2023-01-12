@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-player
+      author: flvtisv
+      changes:
+        - createTable:
+            tableName: player
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: position
+                  type: varchar(15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: teamId
+                  type: bigint
+                  constraints:
+                    nullable: false
